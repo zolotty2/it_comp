@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using it_comp.Modeks;
 using Microsoft.EntityFrameworkCore;
 
 namespace it_comp;
@@ -29,7 +30,7 @@ public partial class ItCompanyContext : DbContext
 
     public virtual DbSet<Status> Statuses { get; set; }
 
-    public virtual DbSet<Task> Tasks { get; set; }
+    public virtual DbSet<Modeks.Task> Tasks { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
@@ -130,7 +131,7 @@ public partial class ItCompanyContext : DbContext
             entity.Property(e => e.StatusName).HasColumnName("status_name");
         });
 
-        modelBuilder.Entity<Task>(entity =>
+        modelBuilder.Entity<Modeks.Task>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("tasks_pkey");
 

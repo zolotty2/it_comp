@@ -1,4 +1,5 @@
-﻿using System;
+﻿using it_comp.Modeks;
+using System;
 using System.Collections.Generic;
 
 namespace it_comp;
